@@ -1,4 +1,4 @@
-# Node.js CRUD Project with Express.js, MongoDB, and Mongoose
+# CRUD Project
 
 This project is a basic CRUD (Create, Read, Update, Delete) application built using Node.js, Express.js, MongoDB, and Mongoose. It allows users to perform CRUD operations on a MongoDB database through a RESTful API.
 
