@@ -9,9 +9,9 @@ This project is a basic CRUD (Create, Read, Update, Delete) application built us
   - Request Body:
     ```json
     {
-        "title": "Todo Name",
-        "description": "Todo Description",
-        "status": "active" or "inactive",
+      "title": "Todo Name",
+      "description": "Todo Description",
+      "status": "active/inactive"
     }
     ```
 - **Get All Items:**
@@ -28,9 +28,9 @@ This project is a basic CRUD (Create, Read, Update, Delete) application built us
   - Request Body (fields to be updated):
     ```json
     {
-        "title": "Todo Name",
-        "description": "Todo Description",
-        "status": "active" or "inactive",
+      "title": "Todo Name",
+      "description": "Todo Description",
+      "status": "active/inactive"
     }
     ```
 
