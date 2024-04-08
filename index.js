@@ -11,7 +11,7 @@ mongoose
   .then(() => console.log("Connected"))
   .catch((err) => console.log(err));
 
-app.use("/todo", routerHandler);
+app.use("/todos", routerHandler);
 
 const errorHandler = (err, req, res, next) => {
   if (res.headersSent) {
