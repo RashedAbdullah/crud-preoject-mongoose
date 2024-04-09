@@ -1,7 +1,7 @@
 const epxress = require("express");
 const mongoose = require("mongoose");
 const routerHandler = require("./router-handler/router-handler");
-
+const userHandler = require("./router-handler/user-handler");
 const app = epxress();
 app.use(epxress.json());
 
@@ -12,6 +12,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/todos", routerHandler);
+app.use("/user", userHandler);
 
 const errorHandler = (err, req, res, next) => {
   if (res.headersSent) {
