@@ -1,8 +1,12 @@
 const epxress = require("express");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
 const routerHandler = require("./router-handler/router-handler");
 const userHandler = require("./router-handler/user-handler");
+
 const app = epxress();
+dotenv.config();
 app.use(epxress.json());
 
 // MongoDB connection with mongoose:

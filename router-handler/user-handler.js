@@ -37,8 +37,20 @@ router.post("/signin", async (req, res) => {
         user[0].password
       );
       if (isValidPassowrd) {
-        const token = jwt.sign({
-          username: user[0].username,
+        // Token generating:
+        const token = jwt.sign(
+          {
+            username: user[0].username,
+            userId: user[0]._id,
+          },
+          process.env.JST_SECRET,
+          {
+            expiresIn: "1h",
+          }
+        );
+        res.status(200).json({
+          accessToken: token,
+          message: "Signin successfull",
         });
       } else {
         res.status(401).json({
@@ -52,7 +64,7 @@ router.post("/signin", async (req, res) => {
     }
   } catch (err) {
     res.status(500).json({
-      message: "Authentication failed",
+      error: "Authentication failed",
     });
   }
 });
